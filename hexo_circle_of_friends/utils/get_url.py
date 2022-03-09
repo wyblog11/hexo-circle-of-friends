@@ -72,7 +72,7 @@ class GetUrl:
 
 
     def get_sakura_url(self,response, queue):
-        avatar = response.css('.link-item img::attr(src)').extract()
+        avatar = response.css('.link-item img::attr(data-src)').extract()
         link = response.css('.link-item a::attr(href)').extract()
         name = response.css('.link-item .sitename::text').extract()
         if name:
